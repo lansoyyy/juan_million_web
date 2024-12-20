@@ -1,7 +1,17 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:juan_million_web/screens/home_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+      options: const FirebaseOptions(
+          apiKey: "AIzaSyA3leMjuJqGHG6BSU-fTkG2ex4AhG_73og",
+          authDomain: "juan-million.firebaseapp.com",
+          projectId: "juan-million",
+          storageBucket: "juan-million.appspot.com",
+          messagingSenderId: "863618395212",
+          appId: "1:863618395212:web:93821de4f8c53f5e9fd8e9"));
   runApp(const MyApp());
 }
 
