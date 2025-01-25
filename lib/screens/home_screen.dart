@@ -86,7 +86,7 @@ class HomeScreen extends StatelessWidget {
                               label: 'Download App',
                               onPressed: () async {
                                 await launchUrlString(
-                                    'https://drive.google.com/file/d/16ULSAc13r8wuwTZatk0ky8yC4VvLky-Y/view?usp=sharing');
+                                    'https://drive.google.com/file/d/1wWwTYNiz44HW5k4Cv_LgfJvQiGpViuCe/view?usp=sharing');
                               },
                             ),
                             ButtonWidget(
