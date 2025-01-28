@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:juan_million_web/widgets/button_widget.dart';
 import 'package:juan_million_web/widgets/text_widget.dart';
@@ -9,6 +8,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+
+    // Define screen width breakpoints for mobile and web
+    bool isMobile =
+        screenWidth < 600; // Typically less than 600px is considered mobile
     return Scaffold(
         body: Container(
             width: double.infinity,
@@ -16,7 +20,7 @@ class HomeScreen extends StatelessWidget {
             decoration: const BoxDecoration(
               color: Color(0xff257DF9),
             ),
-            child: kIsWeb ? webView() : mobileView()));
+            child: !isMobile ? webView() : mobileView()));
   }
 
   Widget webView() {
