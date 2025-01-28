@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:juan_million_web/widgets/button_widget.dart';
 import 'package:juan_million_web/widgets/text_widget.dart';
@@ -15,7 +16,7 @@ class HomeScreen extends StatelessWidget {
             decoration: const BoxDecoration(
               color: Color(0xff257DF9),
             ),
-            child: mobileView()));
+            child: kIsWeb ? webView() : mobileView()));
   }
 
   Widget webView() {
